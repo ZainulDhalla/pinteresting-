@@ -1,7 +1,14 @@
 <div class="jumbotron center">
-	<h2>Beautiful hand-tied bouquets delivered as soon as you order</h2>
-	<%= link_to "Login", "#", class: "btn btn-default" %>
-	<%= link_to "Sign Up", "#", class: "btn btn-primary" %>
+	<h2>Welcome to my app!</h2>
+
+	<% if user_signed_in? %>
+		#Hello
+	<% else %>
+		<p>
+			<%= link_to "Login", new_user_session_path, class: "btn btn-default" %>
+			<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
+		</p>
+	<% end %>
 	
 
 </div>
